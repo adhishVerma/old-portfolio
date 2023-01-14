@@ -1,0 +1,18 @@
+.project-container {
+  height: 100vh;
+  position: relative;
+}
+
+#image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+}
+
+#image-track {
+  display: flex;
+  gap: 6vmin;
+  position: absolute;
+  left : 50%;
+  top : 50%;
+}

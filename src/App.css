@@ -74,11 +74,11 @@ nav ul {
 }
 
 #Projects {
-  min-height: 700px;
   color: whitesmoke;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+#Projects h3 {
+  text-align: center;
 }
 
 #Contact {
