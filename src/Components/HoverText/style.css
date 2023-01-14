@@ -1,0 +1,61 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+
+.text {
+  color: white;
+  font-size: 3vw;
+  text-transform: uppercase;
+}
+
+.word{
+  margin: 0 5%;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.text:has(.fancy:hover) .word:not(.fancy:hover) {
+  opacity: 0.2;
+}
+
+.fancy > .letter {
+  display: inline-block;
+  transition: transform 350ms ease;  
+}
+
+.fancy:hover > .letter{
+  transition-duration: 1200ms;
+  cursor: pointer;
+}
+
+.fancy:hover >.letter:nth-child(1){
+  transform: translate(-12%,-35%) rotate(-7deg);
+}
+.fancy:hover > .letter:nth-child(2){
+  transform: translate(5%,22%) rotate(11deg);
+}
+.fancy:hover > .letter:nth-child(3){
+  transform: translate(-2%,-8%) rotate(6deg);
+}
+.fancy:hover > .letter:nth-child(4){
+  transform: translate(2%,12%) rotate(16deg);
+}
+.fancy:hover > .letter:nth-child(5){
+  transform: translate(7%,-11%) rotate(-11deg);
+}
+.fancy:hover > .letter:nth-child(6){
+  transform: translate(9%,12%) rotate(7deg);
+}
+.fancy:hover > .letter:nth-child(7){
+  transform: translate(-12%,-35%) rotate(-7deg);
+}
