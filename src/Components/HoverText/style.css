@@ -32,6 +32,15 @@
   display: inline-block;
   transition: transform 350ms ease;  
 }
+.fancy > .letter-mern {
+  display: inline-block;
+  transition: transform 350ms ease;  
+}
+
+.fancy:hover > .letter-mern{
+  transition-duration: 1200ms;
+  cursor: pointer;
+}
 
 .fancy:hover > .letter{
   transition-duration: 1200ms;
@@ -58,4 +67,21 @@
 }
 .fancy:hover > .letter:nth-child(7){
   transform: translate(-12%,-35%) rotate(-7deg);
+}
+
+.fancy:hover > .letter-mern:nth-child(1){
+  color: #4db33d;
+  transform: translate(-12%,-23%) rotate(6deg);
+}
+.fancy:hover > .letter-mern:nth-child(2){
+  color: #f0db4f;
+  transform: translate(2%,10%) rotate(-3deg);
+}
+.fancy:hover > .letter-mern:nth-child(3){
+  color: #61DBFB;
+  transform: translate(5%,-15%) rotate(4deg);
+}
+.fancy:hover > .letter-mern:nth-child(4){
+  color : #68a063;
+  transform: translate(14%,-35%) rotate(-2deg);
 }
