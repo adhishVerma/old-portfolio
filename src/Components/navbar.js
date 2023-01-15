@@ -3,6 +3,11 @@ import React from 'react'
 const Navbar = () => {
   return (
       <nav>
+        <div className="hamburger">
+          <hr/>
+          <hr />
+          <hr />
+        </div>
         <div className="menu">
           <ul>
             <li><a href='#About'><div className='button-link'>About</div></a></li>

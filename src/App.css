@@ -7,13 +7,16 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-weight: 400;
   letter-spacing: 1.43px;
   min-height: 70px;
   background-color: #090b13;
   z-index: 10;
+  width: 100vw;
 }
 
 nav ul {
@@ -101,6 +104,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 #Skills .wrapper {
@@ -109,8 +113,8 @@ nav ul {
 
 .skills{
   display: grid;
+  column-gap: 3rem;
   grid-template-columns: repeat(4,1fr);
-  /* min-width: 650px; */
   justify-content: center;
   padding: 25px;
 }
@@ -147,4 +151,56 @@ nav ul {
   gap: 15px;
 }
 
+.hamburger {
+  display: none;
+  width: 25px;
+}
 
+@media screen and (max-width : 600px) {
+  nav{
+    justify-content: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: calc(3.5vw + 5px);
+  }
+  .hamburger :nth-child(1){
+    animation: hamburgerOpen 500ms ease-out 0s 1 normal forwards;
+  }
+  .hamburger :nth-child(2){
+    animation: hamburger-middle 500ms ease-out 0s 1 normal forwards;
+  }
+  .hamburger :nth-child(3){
+    animation: hamburgerOpenbot 500ms ease-out 0s 1 normal forwards;
+  }
+}
+
+
+
+@keyframes hamburgerOpen {
+  0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes hamburger-middle {
+  0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+@keyframes hamburgerOpenbot {
+  0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: translateY(-1000%) rotate(-45deg);
+	}
+}
