@@ -4,8 +4,8 @@ const Skills = () => {
   return (
     <div id="Skills">
       <div className="container">
+        <h3>Skills</h3>
         <div className="wrapper">
-          <h3>Skills</h3>
           <section className='skills'>
           <div className="frontend">Frontend
           <p><img className='logo' src='/assets/react.png' width={48} alt='react-icon'/>React</p>

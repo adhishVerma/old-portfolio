@@ -1,0 +1,30 @@
+:root{
+  --docWidth :90vw;
+}
+
+.resume-container {
+  position: relative;
+  height: 100vh;
+  display: none;
+}
+
+.resume-wrapper {
+  position: absolute;
+  left:calc(50vw - min(var(--docWidth),768px)/2);
+  height: 100vh;
+}
+
+.resume-wrapper object{
+  margin-top: 72px;
+  max-width: 768px;
+  width: var(--docWidth);
+  height: 90%;
+  border: 0;
+}
+
+.resume-wrapper iframe{
+  margin-top: 72px;
+  width: var(--docWidth);
+  height: 90%;
+  border: 0;
+}

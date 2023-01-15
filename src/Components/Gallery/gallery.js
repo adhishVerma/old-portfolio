@@ -15,7 +15,7 @@ const Gallery = () => {
     if (mouseDownAt.current === 0) return;
     const mouseDelta = parseFloat(mouseDownAt.current) - e.clientX,
       maxDelta = window.innerWidth / 2;
-    const percentage = (mouseDelta / maxDelta)*0.37* -100;
+    const percentage = (mouseDelta / maxDelta)*0.87*-100;
     let nextPercentage = parseFloat(prevPercentage.current) + percentage;
     nextPercentage = Math.min(Math.max(nextPercentage, -100), 0);
     setMovePercentage(nextPercentage);
@@ -28,73 +28,74 @@ const Gallery = () => {
 
   return (
     <div
-      className="project-container"
+      className="project-gallery"
       onMouseDown={mousePosition}
       onMouseMove={movement}
       onMouseUp={mouseUp}
+      onMouseLeave={mouseUp}
     >
       <div
         id="image-track"
-        style={{ transform: `translate(${movePercentage}%, -50%)`, transitionDuration : "1.2s",}}
+        style={{ transform: `translate(${movePercentage}%, -50%)`, transitionDuration : "1.2s"}}
       >
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards" }}
-          src="wallhaven-7p2r6y-compressed.jpg"
+          src="https://images.pexels.com/photos/6605310/pexels-photo-6605310.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false} alt="item"
         ></img>
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards" }}
-          src="wallhaven-6dowqx-compressed.jpg"
+          src="https://images.pexels.com/photos/9042882/pexels-photo-9042882.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false}  alt="item"
         ></img>
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards"}}
-          src="wallhaven-85orl2-compressed.jpg"
+          src="https://images.pexels.com/photos/6493409/pexels-photo-6493409.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false}  alt="item"
         ></img>
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards" }}
-          src="wallhaven-vq9ddl-compressed.jpg"
+          src="https://images.pexels.com/photos/14504866/pexels-photo-14504866.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false}  alt="item"
         ></img>
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards" }}
-          src="wallhaven-p9kk7m-compressed.jpg"
+          src="https://images.pexels.com/photos/10805492/pexels-photo-10805492.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false}  alt="item"
         ></img>
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards" }}
-          src="wallhaven-vq9eyl-compressed.jpg"
+          src="https://images.pexels.com/photos/15052341/pexels-photo-15052341.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false}  alt="item"
         ></img>
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards"}}
-          src="wallhaven-3lz66v-compressed.jpg"
+          src="https://images.pexels.com/photos/14281756/pexels-photo-14281756.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false}  alt="item"
         ></img>
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards" }}
-          src="wallhaven-7p27k3-compressed.jpg"
+          src="https://images.pexels.com/photos/14495755/pexels-photo-14495755.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false}  alt="item"
         ></img>
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards" }}
-          src="wallhaven-5g7ke5-compressed.jpg"
+          src="https://images.pexels.com/photos/14402634/pexels-photo-14402634.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false}  alt="item"
         ></img>
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards"}}
-          src="wallhaven-yx8lgk-compressed.jpg"
+          src="https://images.pexels.com/photos/13747516/pexels-photo-13747516.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           draggable={false}  alt="item"
         ></img>
       </div>

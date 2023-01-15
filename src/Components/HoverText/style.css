@@ -85,3 +85,9 @@
   color : #68a063;
   transform: translate(14%,-35%) rotate(-2deg);
 }
+
+@media screen and (max-width: 600px) {
+  .text{
+    font-size: 3rem;
+  }
+}
