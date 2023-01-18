@@ -41,7 +41,7 @@ const Gallery = () => {
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards" }}
-          src="https://images.pexels.com/photos/6605310/pexels-photo-6605310.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          src="/assets/thL-removebg-preview.png"
           draggable={false} alt="item"
         ></img>
         <img
@@ -95,10 +95,11 @@ const Gallery = () => {
         <img
           className="image"
           style={{ objectPosition: `${movePercentage + 100}% center`, transition : `all 1.2s linear`, animationFillMode : "forwards"}}
-          src="https://images.pexels.com/photos/13747516/pexels-photo-13747516.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          src="/assets/thR-removebg-preview.png"
           draggable={false}  alt="item"
         ></img>
       </div>
+      <div className="text">Click and drag</div>
     </div>
   );
 };

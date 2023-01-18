@@ -1,15 +1,17 @@
-import React from 'react'
-import '../resume.css'
+import React from 'react';
+import {Document, Page} from 'react-pdf/dist/esm/entry.webpack'
 
 const Resume = () => {
-  
+
+
   return (
-    <div id='Resume' className="resume-container">
-    <div className='resume-wrapper'>
-      <object data="https://drive.google.com/file/d/1AUPmF-SuTitSqwtyxIYeHRK9UM5wrqcP/preview#view=FitH" type="application/pdf">
-    <iframe title="resume" src="https://drive.google.com/file/d/1AUPmF-SuTitSqwtyxIYeHRK9UM5wrqcP/preview#view=FitH" allowFullScreen="true"></iframe>
-</object>
-    </div></div>
+    <div id="Resume">
+      <a href='resume.pdf' download="resume-Adhish-Kumar-Verma">
+      <button className='button-link'>Download</button></a>
+      <Document file="/resume.pdf">
+        <Page height={window.innerWidth > 600? `` : `480`} pageNumber={1}/>
+      </Document>
+    </div>
   )
 }
 

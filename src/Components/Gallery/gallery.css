@@ -10,6 +10,18 @@
   object-fit: cover;
 }
 
+#image-track > .image:nth-child(1) {
+  width: 8vmin;
+  height: 10vmin;
+  transform: translateY(100%);
+}
+
+#image-track > .image:nth-child(10) {
+  width: 8vmin;
+  height: 10vmin;
+  transform: translateY(350%);
+}
+
 #image-track {
   display: flex;
   gap: 6vmin;
