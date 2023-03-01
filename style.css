@@ -1,45 +1,45 @@
-*{
+* {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
-  background-color: rebeccapurple;
+  /* background-color: #111; */
 }
 
-.salute{
+.salute {
   height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
-.saluteTextContainer{
-  flex:3;
-  color: #111;
+.saluteTextContainer {
+  flex: 3;
+  color: #666;
 }
 
-.saluteText{
+.saluteText {
   font-size: 25vw;
   cursor: default;
 }
 
-.saluteImgContainer{
-  flex : 1;
+.saluteImgContainer {
+  flex: 1;
 }
 
-.saluteImg{
+.saluteImg {
   width: 100%;
   max-height: 100%;
 }
 
-.nameContainer{
+.nameContainer {
   height: 100vh;
   background-color: black;
 }
 
-.name{
+.name {
   color: whitesmoke;
   font-size: 16vw;
   cursor: default;
@@ -47,13 +47,56 @@
   text-align: center;
 }
 
-.jobTitleContainer{
-  background: rebeccapurple url("./img/bg2.png");
+.jobTitleContainer {
   height: 100vh;
 }
 
-.jobTitle{
+.jobTitle {
   color: whitesmoke;
-  font-size: 12vw;
-  line-height: calc(100vh/3);
+  font-size: 8vw;
+  text-align: center;
+  background-image: radial-gradient(
+    circle,
+    rgba(254, 0, 223, 1) 0%,
+    rgba(254, 208, 1, 1) 100%
+  );
+  background-clip: text;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
 }
+
+
+.phoneApp{
+  background-color: red;
+}
+
+.projects{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 0 100px;
+}
+
+.projectsTitle{
+  font-size: 6vw;
+  color: #666;
+}
+
+
+#site-header {
+  position: fixed;
+  height: 52px;
+  background: #fff;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all .6s ease;
+  box-shadow: 0 1px 25px rgba(0,0,0, .1);
+}
+#site-header.hide {
+  top: -53px;
+}
+
