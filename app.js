@@ -48,15 +48,37 @@
 
 const projects = document.getElementById("project-grid");
 
-for (let i = 0; i < 16; i++) {
-  let card = `<div class="card" style="background:hsl(${
-    Math.random() * 360
-  }, 100%, 50%)">
-  <img src="http://source.unsplash.com/random/?sig=${i}" alt=""/>
-  </div>`;
+fetch("./static/data.json").then((res) => res.json()).then(data => 
+    {
+        data.forEach((project, i) => {
+            
+                let card = `<div class="card" style="background:hsl(${
+                  Math.random() * 360
+                }, 100%, 50%)">
+                <img src="http://source.unsplash.com/random/?sig=${i}" alt=""/>
+                <div class="project-info">
+                <p class="project-title">${project.title}</p>
+                <div class="project-link"><a href="${project.link}" target="blank_">Project-link</a></div></div>
+                </div>`;
+              
+                projects.innerHTML += card;
+              
+        })
+    }
+    )
 
-  projects.innerHTML += card;
-}
+// for (let i = 0; i < 7; i++) {
+//   let card = `<div class="project-card-container"><div class="card" style="background:hsl(${
+//     Math.random() * 360
+//   }, 100%, 50%)">
+//   <img src="http://source.unsplash.com/random/?sig=${i}" alt=""/>
+//   </div>
+//   <p class="project-title">lorem ipsum dolor sit</p>
+//   <div class="project-link">Project Link</div>
+//   </div>`;
+
+//   projects.innerHTML += card;
+// }
 
 projects.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
@@ -64,8 +86,8 @@ projects.addEventListener("mousemove", (e) => {
   
   const decX = mouseX/window.innerWidth
   const decY = mouseY/window.innerHeight
-  const maxX = projects.offsetWidth - window.innerWidth
-  const maxY = projects.offsetHeight - window.innerHeight
+  const maxX = (projects.offsetWidth - window.innerWidth)
+  const maxY = (projects.offsetHeight - window.innerHeight)/2.5
 
   const panX = (-1)*maxX*decX
   const panY = (-1)*maxY*decY
