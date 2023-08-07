@@ -4,133 +4,157 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <link rel="icon" href="static/icons/H.svg" type="image/svg+xml">
+    <title>Helix</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/5e90d443bd.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container">
+    <div class="site-bg"></div>
+    <div class="site-container">
       <nav class="" id="site-header">
         <div class="navbar-container">
-          <div>Helix.dev</div>
+          <div class="logo">Helix.dev</div>
           <div id="nav-menu">
             <span><a href="#intro">start.</a></span>
             <span><a href="#projects">work.</a></span>
             <span><a href="#about">about.</a></span>
-            <span>contact.</span>
+            <span><i class="fa-brands fa-github"></i></span>
           </div>
         </div>
       </nav>
       <!-- INTRODUCTION -->
-      <div id="intro" class="intro">
-        <div class="salute">
-          <div class="saluteTextContainer">
-            <div id="timeline"></div>
-            <div class="section-name"><span>a</span>start.</div>
-            <p class="saluteText">Hi, my name is <span>Adhish Verma</span></p>
-            <p class="saluteText jobTitle">I'm a fullstack developer</p>
-            <p>Scroll down to see my work</p>
-            <a href="#contact"><div class="button">Contact Me</div></a>
-          </div>
+      <div class="section-container">
+        <div class="saluteTextContainer gradient">
+          <div class="section-name"><span>a</span>start.</div>
+          <p class="saluteText" id="hello">Hi, my name is <span id="nickname">Helix</span></p>
+          <p class="saluteText jobTitle">I'm a fullstack developer</p>
+          <p id="scroll-down">Scroll down to see my work</p>
+          <a href="#contact"
+            ><div id="contact-link" data-value="contact me">Contact Me</div></a
+          >
         </div>
       </div>
       <!-- PROJECTS -->
-      <div id="projects" class="projects">
-        <div class="projectscontainer">
+      <div id="projects" class="section-container">
+        <div class="projectscontainer gradient">
           <div class="section-name"><span>a</span>work.</div>
-          Here are some of my projects
+          Here are some of my work
           <div class="sub-category">Web</div>
           <!-- Project grid -->
-          <div class="project-grid" id="project-grid">
-            </div>
+          <div class="project-grid" id="project-grid"></div>
         </div>
-        
       </div>
       <!-- ABOUT -->
-      <div id="about" class="about">
-        <div class="about-container">
+      <div id="about" class="section-container">
+        <div class="about-container gradient">
           <div class="section-name"><span>a</span>about.</div>
-          <div class="details">
-            <div>
-              <span class="pink">class</span>
-              <span class="string">Adhish Kumar Verma</span>:
-            </div>
-            <div class="comment">## This is a comment</div>
-            <div>
-              <span class="tab-space">****</span
-              ><span class="pink">def</span>
-              <span class="purple">__init__</span>(<span class="purple"
-                >self</span
-              >):
-            </div>
-            <div>
-              <span class="tab-space">****</span
-              ><span class="tab-space">****</span
-              ><span class="purple">self</span>.<span class="orange"
-                >name</span
-              >
-              = <span class="string">"Adhish Kumar Verma"</span>
-            </div>
-            <div>
-              <span class="tab-space">****</span
-              ><span class="tab-space">****</span
-              ><span class="purple">self</span>.<span class="orange"
-                >dateOfBirth</span
-              >
-              = <span class="string">"1998-02-16"</span>
-            </div>
-            <div>
-              <span class="tab-space">****</span
-              ><span class="tab-space">****</span
-              ><span class="purple">self</span>.<span class=""
-                >email</span
-              >
-              = <span class="string">"v.adhish16@gmail.com"</span>
-            </div>
-            <br>
-            <div>
-              <span class="tab-space">****</span
-              ><span class="pink">def</span>
-              <span class="green">get_skills</span>():
-            </div>
-            <div>
-              <span class="tab-space">****</span
-              ><span class="tab-space">****</span
-              ><span class="pink">return</span> <span>[ </span>
-              <span class="string">"HTML/CSS/JS",</span>
-              <span class="string">"React JS",</span>
-              <span class="string">"Node.js",</span>
-              <span class="string">"Firebase",</span>
-              <span class="string">"Python",</span>
-              <span class="string">"GraphQL",
-
-              </span>
-              <div>
-                <span class="tab-space">****</span><span class="tab-space">****</span><span class="string">"MongoDB",</span>
-                <span class="string">"React-router",</span>
-                <span class="string">"Express.js",</span>
-                <span class="string">"Tailwind",</span>
-                <span class="string">"MUI",</span>
-                <span class="string">"Next.js",</span>
-                <span class="string">"Socket.io",</span>
+          <!-- tabs -->
+          <ul id="nav-tab" class="nav-tab">
+            <li><a href="#skills">Skills</a></li>
+            <li class="active"><a href="#profile">Profile</a></li>
+            <li><a href="#work-history">Work history</a></li>
+          </ul>
+          <!-- tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane" id="skills">
+              <div class="tab-container">
+                <div class="skills-list">
+                    <img src = "static/icons/python.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/mongodb.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/express.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/react.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/node.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/tailwind.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/next.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/router.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/mui.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/firebase.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/js.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/ts.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/socketio.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/graphql.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/fastapi.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/c++.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/html.svg" alt="skill-icon" class="skill"/>
+                    <img src = "static/icons/css.svg" alt="skill-icon" class="skill"/>
+                </div>
               </div>
-              <div><span class="tab-space">****</span><span class="tab-space">****</span>
-              <span class="string">"TypeScript",</span>
-              <span class="string">"Java" </span><span>]</span></div>
-              
+            </div>
+            <div class="tab-pane active" id="profile">
+              <div class="tab-container">
+                Hi! I'm Adhish Kumar Verma, a self-taught, full-stack developer
+                with a deep-dive focus on the MERN stack. I thrive on
+                transforming intricate lines of code into powerful, functional
+                applications. My technical skills, coupled with an innate
+                curiosity, enable me to build robust and scalable applications
+                that provide seamless user experiences. Staying updated with the
+                latest trends and technologies in the field, I approach every
+                new project as an opportunity to expand my knowledge and
+                capabilities. My journey as a developer has been incredibly
+                enriching and I'm always eager to explore new paths in the tech
+                world. Thank you for stopping by. Feel free to connect for
+                collaborations or discussions on potential opportunities.
+              </div>
+            </div>
+            <div class="tab-pane" id="work-history">
+              <div class="tab-container">
+                <div class="job-title">
+                  Independent Consultant<em> Aug 2022 - Present</em>
+                </div>
+                <div class="job-desc">
+                  <ul>
+                    <li>
+                      Crafting captivating websites and dynamic E-commerce
+                      stores
+                    </li>
+                    <li>
+                      Determining coding requirements for clients, including
+                      seamless e-commerce capability, extensive product
+                      catalogues, efﬁcient shopping carts, and secure payment
+                      gateways.
+                    </li>
+                  </ul>
+                </div>
+                <div class="job-title">
+                    <span>
+                  Web Developer, <em>CrowdBook.in</em></span><em> Feb 2021 - Feb 2022</em>
+                </div>
+                <div class="job-desc">
+                  <ul>
+                    <li>
+                      Collaborated with content creators to develop SEO-friendly
+                      content, employing keyword-rich titles, compelling meta
+                      descriptions, and image alt tags.
+                    </li>
+                    <li>
+                      Revamped website architecture and content strategy,
+                      driving a remarkable 30% increase in organic trafﬁc and
+                      reducing the bounce rate by 10% within just 6 months.
+                    </li>
+                    <li>
+                      Achieved a remarkable search ranking of number 2 across
+                      niche keywords, amplifying the website's visibility and
+                      reach.
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- GITHUB -->
-      <div class="github"></div>
     </div>
-    <script type="text/javascript" src="./app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="./app.js" defer></script>
   </body>
 </html>
